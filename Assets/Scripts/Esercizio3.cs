@@ -10,7 +10,7 @@ public class Esercizio3 : MonoBehaviour
     public int numeroMinore;
     public int numeroMaggiore;
 
-    private int[] _array;
+    public int[] _array;
 
     private int[] GeneraArray(int dimensione, int minimo, int massimo)
     {
@@ -74,10 +74,10 @@ public class Esercizio3 : MonoBehaviour
     {
         if (_array.Length > 1)
         {
-            int ultimo = numeroMaggiore;
-            int penultimo = numeroMaggiore;
+            int ultimo = _array[0];
+            int penultimo = _array[0];
 
-            for (int i = 0; i < _array.Length; i++)
+            for (int i = 1; i < _array.Length; i++)
             {
                 if (_array[i] < ultimo)
                 {
@@ -100,10 +100,10 @@ public class Esercizio3 : MonoBehaviour
     {
         if (_array.Length > 1)
         {
-            int primo = numeroMinore;
-            int secondo = numeroMinore;
+            int primo = _array[0];
+            int secondo = _array[0];
 
-            for (int i = 0; i < _array.Length; i++)
+            for (int i = 1; i < _array.Length; i++)
             {
                 if (_array[i] > primo)
                 {
@@ -113,6 +113,26 @@ public class Esercizio3 : MonoBehaviour
                 else if (_array[i] > secondo && _array[i] != primo)
                     secondo = _array[i];
             }
+
+            //Soluzione Prof, non sempre funziona, vedi num negativi {-5, -4, -3}
+            //int max = _array[0];
+            //int max2 = _array[0];
+
+            //for (int i = 0; i < _array.Length; i++)
+            //{
+            //    int number = _array[i];
+
+            //    if (number > max)
+            //    {
+            //        max = number;
+            //    }
+            //    else if (number > max2 && number <= max)
+            //    {
+            //        max2 = number;
+            //    }
+            //}
+
+            //Debug.Log($"Numero più alto: {primo} - Secondo numero più alto: {secondo}");
 
             Debug.Log($"Numero più alto: {primo} - Secondo numero più alto: {secondo}");
         }

@@ -166,10 +166,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 812530f1e58c8d142ab47421cecb2b4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debug: 1
-  grandezzaArray: 10
-  numeroMinore: 1
-  numeroMaggiore: 10
+  debug: 0
+  grandezzaArray: 3
+  numeroMinore: -5
+  numeroMaggiore: 0
+  _array: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
